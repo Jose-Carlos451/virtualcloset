@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Axios from "../services/ConexionAxios";
+import { Link } from "react-router-dom";
 
 function tabladatos() {
+  const[producto,setProductos]=useState([]);
+
+  const Consultar=async()=>{
+    const consulta=await Axios.get('/persona/consultar');
+    setProductos.Personas(consulta.data);
+  }
+  
   return (
     <div>
     <nav class="navbar bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">VirtualCloset</a>
+    <a class="navbar-brand"></a>
     <form class="d-flex" role="search">
       <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
       <button class="btn btn-outline-success" type="submit">Buscar</button>
@@ -55,7 +64,10 @@ function tabladatos() {
 </table>
 
 <div class="botones mt-5 md-5">
-  <button type="button" class="btn btn-light float-start">Atras</button>
+<Link to="/" class="btn btn-light float-start">
+Atras
+</Link>
+  
   <button type="button" class="btn btn-primary float-end">Siguiente</button>
 </div>
     </div>
