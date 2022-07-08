@@ -1,0 +1,58 @@
+
+.color-boton:{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.color-boton:hover{
+    background: #45c750;
+    box-shadow: 0 0 10px #45c750, 0 0 40px #45c750, 0 0 80px #45c750;
+}
+
+
+.color-botonregistro:{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.color-botonregistro:hover{
+    background: #16cfdd;
+    box-shadow: 0 0 10px #16cfdd, 0 0 40px #16cfdd, 0 0 80px #16cfdd;
+}
+
+.color-botonadministrador:{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 30px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.color-botonadministrador:hover{
+    background: #f6b920;
+    box-shadow: 0 0 10px #f6b920, 0 0 40px #f6b920, 0 0 80px #f6b920;
+}

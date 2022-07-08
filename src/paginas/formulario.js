@@ -1,5 +1,6 @@
 //import React from 'react'
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Axios from "../services/ConexionAxios";
 
 function formulario() {
@@ -39,11 +40,6 @@ const Enviar=(e)=>{
 
   return (
     <div>
-      <nav class="navbar bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">VirtualCloset</a>
-  </div>
-</nav>
 <div>
 <h1>
 <p class="text-center">Información del Producto</p>
@@ -76,7 +72,8 @@ const Enviar=(e)=>{
   <input type="text" class="form-control" placeholder="Cantidad" aria-label="Amount (to the nearest dollar)" name='Cantidad' value={valores.Cantidad} onChange={cambioEstado}/>
 </div>
 <div class="botones mt-5 md-5">
-  <button type="button" class="btn btn-danger float-start">Cancelar</button>
+
+  <Link to="/apli" class="btn btn-danger float-start">Cancelar</Link>
   <button type="submit" class="btn btn-primary float-end">Guardar</button>
 </div>
 </form>

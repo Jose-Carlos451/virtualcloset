@@ -8,6 +8,7 @@ import Intercobro from "./paginas/intercobro"
 import Escribir from "./paginas/Escrirbir";
 import Aplicacion from "./Rutas/aplicacion";
 
+
 function App() {
   return (
       <div>
