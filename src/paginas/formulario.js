@@ -39,7 +39,7 @@ const Enviar=(e)=>{
 
 
   return (
-    <div>
+    <div class="fondo">
 <div>
 <h1>
 <p class="text-center">Información del Producto</p>

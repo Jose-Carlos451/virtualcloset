@@ -2,7 +2,7 @@ import React from 'react'
 
 function Tablaticket() {
   return (
-    <div>
+    <div class="fondo">
 <nav class="navbar bg-light">
   <div class="container-fluid">
     <a class="navbar-brand">VirtualCloset</a>

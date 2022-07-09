@@ -11,8 +11,8 @@ function tabladatos() {
   }
   
   return (
-    <div>
-    <nav class="navbar bg-light">
+    <div class="fondo">
+    <nav class="navbar barra2">
   <div class="container-fluid">
     <a class="navbar-brand"></a>
     <form class="d-flex" role="search">

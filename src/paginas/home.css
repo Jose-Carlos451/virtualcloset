@@ -1,3 +1,25 @@
+.fondo{
+    background: #f8e8cd no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-seize: absolute;
+    background-size: auto;
+    height: 520px;
+    width: 1263px;
+}
+
+.barra{
+    background-color: #fab0be;
+    height: 60px;
+    width: 1263px;
+}
+
+.barra2{
+    background-color: #f8e8cd;
+    height: 60px;
+    width: 1263px;
+}
+
 
 .color-boton:{
     position: relative;

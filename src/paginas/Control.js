@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Control() {
   return (
-    <div>
+    <div class="fondo">
       <h5 class="card-title text-center fs-1">Inicio de sesión</h5>
       <p class="card-text">
         <div class="mb-3">

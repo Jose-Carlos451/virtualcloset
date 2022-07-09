@@ -4,7 +4,7 @@ import Cobranza from "../img/cobranza.gif";
 
 function intercobro() {
   return (
-    <div>
+    <div class="fondo">
       <div class="d-grid gap-2 col-5 mx-auto mt-5">
         <button class="btn btn-info" type="button">
           Escanear código

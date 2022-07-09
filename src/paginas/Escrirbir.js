@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 //Este es la pestaña para ingresar el codigo para registrar
 function Escrirbir() {
   return (
-    <div>
+    <div class="fondo">
       <h1 class="text-center">Ingrese el código</h1>
       <form class="row g-3">
       <div class="mb-3">

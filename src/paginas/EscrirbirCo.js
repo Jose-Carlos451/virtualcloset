@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function EscrirbirCo() {
   return (
-    <div>
+    <div class="fondo">
         <h1 class="text-center">Ingrese el código</h1>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese el código"/>
       <div class="input-group mb-5 container mx-auto">
