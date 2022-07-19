@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Gift from "../img/hello.gif";
 import Axios from "../services/ConexionAxios";
 import './home.css';
-
-//#f8e8cd
+import {useNavigate} from 'react-router-dom';
+import {Toast} from 'react-toastify'  
 
 function home() {
   return (
@@ -15,7 +15,7 @@ function home() {
           Cobrar Producto
         </Link>
        
-        <Link to="/apli" class="btn btn- mt-5 color-botonregistro">
+        <Link to="/for" class="btn btn- mt-5 color-botonregistro">
           Registrar Producto
         </Link>
 

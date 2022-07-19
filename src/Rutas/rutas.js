@@ -24,6 +24,7 @@ function rutas() {
             <Route exact path="/escc" element={<EscrirbirCo />} />
             <Route exact path="/apli" element={<Aplicacion />} />
             <Route exact path="/ecb" element={<Escrirbir />} />
+            <Route exact path="/foredit/:id" element={<Formulario />} />
           </Routes>
         </Layouts>
       </Router>

@@ -1,15 +1,41 @@
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import Axios from "../services/ConexionAxios";
 import { Link } from "react-router-dom";
 
-function tabladatos() {
-  const[producto,setProductos]=useState([]);
+class tabladatos extends Component {
+  constructor(props){
+    super(props);
 
-  const Consultar=async()=>{
-    const consulta=await Axios.get('/persona/consultar');
-    setProductos.Personas(consulta.data);
+    this.state={
+      productos:[]
+    }
+
+
+    this.getProductos - this.getProductos.bind(this);
+
   }
-  
+   
+  componentDidMount(){
+    this.getProductos();
+  }
+
+
+
+  getProductos=async()=>{
+    await Axios.get('producto/consultar')
+    .then(res=>{
+      this.setState({productos: res.data});
+    }).catch((error)=>{
+      console.log(error);
+    });
+  }
+
+  deleteProducto= async(id)=>{
+    await Axios.delete('producto/eliminar/'+id)
+    this.getProductos();
+  }
+
+  render(){
   return (
     <div class="fondo">
     <nav class="navbar barra2">
@@ -32,34 +58,32 @@ function tabladatos() {
       <th scope="col">Nombre</th>
       <th scope="col">Cantidad</th>
       <th scope="col">Precio</th>
-      <th scope="col">Accion</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Resistol 850</th>
-      <td>20</td>
-      <td>$15.00</td>
-      <td>
-      <button type="button" class="btn btn-outline-danger">Eliminar</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tijera Barrilito</th>
-      <td>24</td>
-      <td>$18.00</td>
-      <td>
-      <button type="button" class="btn btn-outline-danger">Eliminar</button>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Borrador Pelikan ch</th>
-      <td>35</td>
-      <td>$3.50</td>
-      <td>
-      <button type="button" class="btn btn-outline-danger">Eliminar</button>
-      </td>
-    </tr>
+    {
+      this.state.productos.map(producto=>
+        <tr key={producto._id}>
+          <th>{producto.nombre}</th>
+          <th>{producto.cantidad}</th>
+          <th>{producto.precio}</th>
+
+
+          <th><Link className="btn btn-primary" 
+          to={"/foredit/"+producto._id} 
+          role="button">Editar</Link></th>
+
+
+          <th><button type="button" 
+          class="btn btn-danger"
+          onClick={()=>this.deleteProducto(producto._id)}
+          >Eliminar</button></th>
+        </tr>
+        
+        )
+    }
   </tbody>
 </table>
 
@@ -73,5 +97,5 @@ Atras
     </div>
   )
 }
-
+}
 export default tabladatos
